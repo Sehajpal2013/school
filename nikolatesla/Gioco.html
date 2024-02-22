@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gioco di Scienze</title>
+
+
+<style>
+    :root{
+        --fc : #F6FA70;
+        --bc: #FF0060;
+        --sbc:#00DFA2;
+        --sfc:#13ABC4;
+      }
+
+body{
+    background-image: url(./Nikola23anni.jpeg);
+}
+
+
+
+.inport{
+    display: flex;
+    font-family: 'Pacifico', cursive;
+    font-size: 30px;
+    font-weight: 900;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--bc);
+    color: var(--fc);
+    border: solid 4px var(--sbc);
+    height: 50%;
+    width: 50%;
+    border-radius: 4vh;
+    text-shadow: 1vh 1vh 5px var(--sbc);
+    box-shadow: 3vh 3vh 10px var(--fc);
+}
+
+
+
+h1{
+    margin: 6px;
+}
+
+.risposta{
+    display: flex;
+    font-family: 'Pacifico', cursive;
+    font-size: 30px;
+    font-weight: 900;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--sbc);
+    color: var(--sfc);
+    border: solid 4px var(--sfc);
+    height: 25%;
+    width: 25%;
+    border-radius: 2vh;
+    box-shadow: 10px 10px 20px var(--sfc);
+}
+
+
+.risposta:focus{
+    font-family: 'Pacifico', cursive;
+    font-size: 30px;
+    font-weight: 900;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--sbc);
+    color: var(--sfc);
+    border: solid 4px var(--sbc);
+    height: 25%;
+    width: 25%;
+    border-radius: 2vh;
+    background-color: var(--sfc);
+    color: var(--sbc);
+    box-shadow: -10px -10px 20px #1CD6CE;
+}
+
+
+
+.avanti{
+    display: flex;
+    font-family: 'Pacifico', cursive;
+    font-size: 3vh;
+    font-weight: 900;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--sbc);
+    color: var(--bc);
+    border: solid 4px var(--fc);
+    height: 25%;
+    width: 25%;
+    border-radius: 2vh;
+
+}
+
+.correzione{
+    display: flex;
+    font-family: 'Pacifico', cursive;
+    font-size: 3vh;
+    font-weight: 900;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--sbc);
+    color: var(--bc);
+    border: solid 4px var(--fc);
+    height: 25%;
+    width: 25%;
+    border-radius: 2vh;
+}
+
+
+
+      
+</style>
+</head>
+<body>
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Gioco su Nikola Tesla</title>
+  </head>
+  <body>
+      <div class="inport">
+          <h1>Gioco su Nikola Tesla</h1>
+      </div>
+      <div class="inport">
+          <h1 class="domanda"></h1>
+          <h2 class="risposteps"></h2>
+          <input type="checkbox" class="risposta"><br>
+          <h2 class="risposteps"></h2>
+          <input type="checkbox" class="risposta" style="display: inline;"><br>
+          <h2 class="risposteps"></h2>
+          <input type="checkbox" class="risposta"><br>
+          <h2 class="valutazione"></h2>
+      </div>
+      <button onclick="correggi()" class="correzione">Correggi</button>
+      <button onclick="avanti()" class="avanti">Avanti</button>
+  
+      <script>
+        let domanda = document.querySelector(".domanda");
+        let risposte = document.querySelectorAll(".risposteps");
+        let risposteCheckboxes = document.querySelectorAll(".risposta");
+        let valutazione = document.querySelector(".valutazione");
+    
+        let currentQuestionIndex = 0;
+    
+        let questions = [
+            {
+                domanda: "Quando è nato Nikola Tesla",
+                opzioni: ["20 Maggio 1793", "30 Settembre 1284", "10 luglio 1856"],
+                opzcor: "10 luglio 1856"
+            },
+            {
+                domanda: "Quando è morto Nikola Tesla",
+                opzioni: ["10 marzo 1839", "7 gennaio 1943", "4 dicembre 1137"],
+                opzcor: "7 gennaio 1943"
+            },
+            {
+
+              domanda: "Dove ha studiato l'ingegneria elettrica",
+              opzioni: ["in Australia", "in Croazia", "in America", ],
+              opzcor: "in Australia"
+            },
+
+
+            {
+                domanda: "Con chi colaborò iniziamente Nikola Tesla",
+                opzioni: ["Leonardo da Vinci", "Albert Einstein", "Thomas Edison", ],
+                opzcor: "Thomas Edison"
+            },
+            {
+                domanda: "Come si Comunicava con la Corrente Alternata?",
+                opzioni: ["Con fili", "Senza fili", "Per poche distanze", ],
+                opzcor: ""
+            }
+            
+
+        ];
+    
+        function displayQuestion() {
+            let currentQuestion = questions[currentQuestionIndex];
+            domanda.textContent = currentQuestion.domanda;
+            for (let i = 0; i < risposte.length; i++) {
+                risposte[i].textContent = currentQuestion.opzioni[i];
+                
+            }
+        }
+    
+        function correggi() {
+            let currentQuestion = questions[currentQuestionIndex];
+            let selectedAnswers = [];
+            risposteCheckboxes.forEach((checkbox, index) => {
+                if (checkbox.checked) {
+                    selectedAnswers.push(currentQuestion.opzioni[index]);
+                }
+            });
+            if (selectedAnswers.length === 0) {
+                valutazione.textContent = "Seleziona almeno una risposta.";
+                return;
+            }
+            if (selectedAnswers.includes(currentQuestion.opzcor)) {
+                valutazione.textContent = "Risposta corretta!";
+            } else {
+                valutazione.textContent = `Sbagliato la risposta era ${valutazione.textContent = currentQuestion.opzcor}`;
+            }
+        }
+    
+        function avanti() {
+            currentQuestionIndex++;
+            if (currentQuestionIndex < questions.length) {
+                displayQuestion();
+                valutazione.textContent = ""; // Clear previous evaluation
+                risposteCheckboxes.forEach(checkbox => {
+                    checkbox.checked = false; // Reset checkboxes
+                });
+            } else {
+                domanda.textContent = "Il Gioco è finito, Spero che ti sia piacuto";
+
+                risposte.forEach(risposta => {
+                    risposta.textContent = ""; // Clear previous options
+                });
+                valutazione.textContent = ""; // Clear previous evaluation
+                document.querySelector(".correzione").disabled = true; // Disable correction button
+                document.querySelector(".avanti").disabled = true; // Disable next button
+            }
+        }
+    
+        // Display the first question when the page loads
+        displayQuestion();
+    </script>
+    
+  
+</body>
+</html>
