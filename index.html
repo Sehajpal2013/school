@@ -1,22 +1,333 @@
-
 <!DOCTYPE html>
-<html lang="en" style="text-align: center;">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giornata Dell'Unità Nazionale</title>
+    <title>Ricerca di Scienze</title>
     <style>
-       
-        h1{
-    color:Red
-        }
+      :root{
+        --fc : #43766C;
+        --bc: #F8FAE5;
+        --sbc:#EBFFFB;
+        --sfc:#13ABC4;
+
+       --gr2fc: #D67BFF;
+       --gr2bc: #FEFFAC;
+       --gr2bcc: #45FFCA;
+      }
+
+
+      body{
+    background-image: url(./Nikola23anni.jpeg);
+}
+
+
+
+      .outer{
+        display: flex;
+        width: 80%;
+        justify-content: center;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+      }
+         .main{
+            display:grid;
+            grid-template-rows:repeat(1,1fr);
+            grid-template-columns:repeat(1,3fr);
+            gap: 1vh;
+            height: 100%;
+            width: 100%;
+            text-align:center;
+           
+         }
+
+
+         .card{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--bc);
+            border-radius: 4vh;
+            border: 2vh solid var(--fc);
+            color: var(--fc);
+            font-weight: 200;
+         }
+
+         .card:nth-child(2)
+{
+  grid-column: span 2;
+  font-size: 10vh;
+  font-family: 'Sevillana', cursive;
+  font-weight: 900;
+  text-align: center;
+}
+
+.card:nth-child(1){
+  grid-row: span 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bc);
+  padding-right: 4,5vh;
+  padding-left: 4,5vh;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+}
+
+.card:nth-child(3){
+background-color: var(--sbc);
+color: var(--sfc);
+grid-row: span 15;
+grid-column: span 3;
+font-family: 'Climate Crisis', sans-serif;
+font-weight: 500;
+font-size: 6rem;
+text-align: center;
+border: 4vh solid var(--sfc);
+
+}
+
+.card:nth-child(4){
+    background-color: var(--sbc);
+    border: 2vh solid var(--sfc);
+    color: var(--sfc);
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 2vh;
+    
+}
+
+.card:nth-child(5){
+    background-color: var(--sbc);
+    border: 2vh solid var(--sfc);
+    color: var(--sfc);
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 2vh;
+}
+    .titolo{
+      font-size: 3vh;
+      font-family: 'Sevillana', cursive;
+      font-weight: 900;
+      align-items: center;
+      justify-content: center;
+    }
+.card:nth-child(6){
+    background-color: var(--sbc);
+    border: 2vh solid var(--sfc);
+    color: var(--sfc);
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 2vh;
+}
+
+
+
+.card:nth-child(7){
+    background-color: var(--sbc);
+    border: 2vh solid var(--sfc);
+    color: var(--sfc);
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 2vh;
+}
+
+
+
+.card:nth-child(8){
+    background-color: var(--sbc);
+    border: 2vh solid var(--sfc);
+    color: var(--sfc);
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 2vh;
+}
+
+
+
+.card:nth-child(9){
+    background-color: var(--sbc);
+    border: 2vh solid var(--sfc);
+    color: var(--sfc);
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 2vh;
+}
+
+
+
+
+
+.cardini{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--gr2bcc);
+            border-radius: 4vh;
+            border: 2vh solid var(--gr2fc);
+            color: var(--gr2bc);
+            font-weight: 900;
+            font-size: 2vh;
+            font-family: "Roboto", sans-serif;
+            font-weight: 500;
+            text-shadow: 2px 2px 2px var(--gr2fc);
+         }
+
+
+
+
+.cardi{
+  
+grid-row: span 15;
+grid-column: span 3;
+font-family: 'Climate Crisis', sans-serif;
+font-weight: 500;
+font-size: 6rem;
+text-align: center;
+border: 4vh solid var(--gr2fc);
+
+
+}
+
+
+.title{
+  border-right: 1vh;
+}
+
+.cardino{
+   font-size: 300%;
+   text-align: center;
+}
+
+
+@media (max-width:699px){
+  .main{
+            grid-template-columns: 1fr;
+         }
+}
+
+
+
+
+
+
+
+
     </style>
 </head>
-<body>
-    <h1 Align="center">Giornata dell'Unità Nazionale e delle Forze Armate</h1>
-<a href="https://drive.google.com/file/d/1swNU4i0roG6p6vgIli1q1YRZOmGZkXhs/view?usp=drive_web&authuser=1" ><h3 Align="center">La leggenda del Piave</h3></a>
-<a href="https://drive.google.com/file/d/1bOk3bjSlwedCvqg2xkbgx8fhVjRwkmeo/view?usp=drive_web&authuser=1" ><h3 Align="center">Inno d'Italia</h3></a>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sevillana&display=swap" rel="stylesheet">
 
-<img src="./milite-ignoto.jpg" alt="Altare della Patria">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Climate+Crisis&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+  <body>
+    
+    <div class="outer">
+    <div class="main">
+      <img src="./Nicola tesla.jpeg" alt="Nikola Tesla" class="card">
+        <div class="card">Nikola Tesla </div>
+        <div class="card">La Storia
+        </div>
+        <div class="card storia">Nikola Tesla è stato un inventore, ingegnere elettrico e 
+          fisico di origini serbo-statunitensi, nato il 10 luglio del 1856 a Smiljan,
+           in Croazia.
+            .È considerato uno dei più grandi inventori della storia e 
+            ha contribuito in modo significativo allo sviluppo 
+            della tecnologia elettrica.</div>
+
+
+
+
+        <div class="card storia first"><span class="titolo">Giovinezza e Istruzione</span><br>
+          Tesla studiò ingegneria elettrica alla Technical University di Graz, in Austria,
+           e successivamente all'Università Carolina a Praga. Dopo aver lavorato in diverse aziende in Europa,
+            si trasferì negli Stati Uniti nel 1884.</div>
+
+
+
+        <div class="card storia second"><span class="titolo">Collaborazione con Edison e Guerra delle Correnti</span>
+          Inizialmente collaborò con Thomas Edison, ma i due ebbero divergenze 
+          sulla tecnologia elettrica, dando inizio alla cosiddetta
+           "guerra delle correnti" tra il sistema a corrente continua di Edison e 
+           il sistema a corrente alternata di Tesla.</div>
+
+
+           <div class="card"><span class="titolo">Wardenclyffe Tower e Fallimento Finanziario</span>Tesla intraprese il progetto della Wardenclyffe
+             Tower per la trasmissione senza fili di energia,
+             ma a causa di problemi finanziari, il progetto fu abbandonato e Tesla affrontò 
+             difficoltà economiche.</div>
+
+
+
+<div class="card"><img src="./Nikola.jpeg" alt="Nikola Tesla"></div>
+
+
+<div class="card"><span class="titolo">Vita Personale e Morte</span>Tesla trascorse gli ultimi 
+            anni della sua vita in relativa oscurità e 
+            morì il 7 gennaio 1943 a New York. Nonostante la sua genialità,
+             Tesla non fu sempre riconosciuto o ricompensato adeguatamente durante la sua vita.</div>
+
+
+
+
+             <div class="cardini cardi">Le Invenzioni</div>
+             <div class="cardini"><span class="titolo title">Sistema a Corrente Alternata (AC)</span>Tesla sviluppò e promosse
+               il sistema a corrente alternata, che si rivelò più efficiente per la trasmissione di energia su lunghe distanze
+               rispetto al sistema a corrente continua. Questa invenzione 
+              fu cruciale per l'elettrificazione del mondo moderno.</div>
+
+
+
+             <div class="cardini"><span class="titolo title">Motore a Induzione a Corrente Alternata</span>Tesla 
+              progettò e brevetto il motore a induzione a 
+              corrente alternata, un dispositivo che ha contribuito in modo significativo 
+              alla trasformazione dell'energia elettrica in lavoro meccanico.</div>
+
+
+
+             <div class="cardini"><span class="titolo title">Trasformatore Tesla</span>Il trasformatore 
+              Tesla è un tipo specifico di trasformatore ad alta frequenza che ha molteplici applicazioni, 
+              inclusa la trasmissione di energia elettrica senza fili.</div>
+
+
+
+
+             <div class="cardini"><span class="titolo title">Bobina di Tesla</span>La bobina di Tesla è un dispositivo che genera 
+              tensioni molto elevate ad alta frequenza. Anche se originariamente sviluppata per la trasmissione senza fili,
+               la bobina di Tesla è ora nota per le sue applicazioni nelle dimostrazioni scientifiche.</div>
+
+<div class="cardini cardino"><a href="./Gioco.html">Gioco su Nikola Tesla</a></div>
+
+             <div class="cardini"><span class="titolo title">Sistema di Trasmissione di Energia Senza Fili</span>Tesla lavorò su un sistema per trasmettere 
+              energia elettrica senza l'uso di fili, un concetto che non fu completamente realizzato ma che continua a ispirare la ricerca moderna 
+              sulla trasmissione senza fili.</div>
+     </div>
+       
+   </div>
+   <div class="card">wikipedia.org</div>
+       <div class="card">studenti.it</div>
+       <div class="card" style="font-size: 4vh;">storicang.it</div>
+       <div class="card">Ho Scelto lui perchè mi incuriosiva la corrente alternata</div>
 </body>
 </html>
